@@ -1,0 +1,26 @@
+#include <iostream>
+
+using namespace std;
+
+int Factor(int n) {
+    int x = 1;
+    for (int i = 2; i <= n; i++) {
+        x *= i;
+    }
+    return x;
+}
+
+int main()
+{
+    
+    int n, k;
+    cin >> n >> k;
+
+    int nf=1, kf = 1, nf_kf = n - k;
+    int x;
+    x = (Factor(n)) / (Factor(k) * Factor(nf_kf));
+    
+    cout << x;
+
+    return 0;
+}
